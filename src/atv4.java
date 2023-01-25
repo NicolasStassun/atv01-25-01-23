@@ -7,14 +7,14 @@ public class atv4 {
     public static void main(String[] args) {
 
         Double NotaAluno =0.0;
-        char NotaAlunoChar = 'z';
+        char NotaAlunoChar = 'a';
 
         System.out.println("Informe a Nota do Aluno: ");
         NotaAluno = sc.nextDouble();
 
-       classificarNota(NotaAluno,NotaAlunoChar);
+       NotaAlunoChar= classificarNota(NotaAluno,NotaAlunoChar);
 
-        System.out.println(NotaAlunoChar);
+        System.out.println("A Nota do aluno é: "+NotaAlunoChar);
     }
 
     public static char classificarNota(double NotaAluno, char NotaAlunoChar){

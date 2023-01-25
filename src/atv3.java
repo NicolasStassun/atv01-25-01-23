@@ -43,6 +43,10 @@ public class atv3 {
                     "2- Adicionar Item\n" +
                     "3- Finalizar Compra\n"+
                     "----------------------------\n");
+
+
+
+
             i = sc.nextInt();
 
             switch (i){
@@ -60,8 +64,8 @@ public class atv3 {
 
                 case 3:
 
-                    MostraProdutos(NumeroProduto,DescricaoProduto,PreçoProduto);
-
+                    FinalizarCompra(NumeroProduto,DescricaoProduto,PreçoProduto);
+                        i=3;
                     break;
 
             }
@@ -86,7 +90,7 @@ public class atv3 {
         sc.nextLine();
         for (int i=0;i<=4;i++) {
 
-            if (NumeroProduto[i] == AdcNum) {
+            if (NumeroProduto[i].equals(AdcNum)) {
 
                 System.out.println("Informe a quantidade que você deseja adicionar ao seu carrinho: ");
                 quantidade = sc.nextInt();
@@ -99,28 +103,35 @@ public class atv3 {
     }
     public static void FinalizarCompra(String[] NumeroProduto, String[] DescricaoProduto, Double[] PreçoProduto){
 
-        double totalCompra=0.0;
-        for (int i=0;i<=4;i++) {
-            if (QuantidadeProdutos[i]!=0) {
+        double totalCompra[] = new double[5];
+        double total=0.0;
 
-                if(i==0){
+                if(QuantidadeProdutos[0]!=null){
+                    totalCompra[0] = QuantidadeProdutos[0]*500.0;
                     System.out.println(QuantidadeProdutos[0]+" | "+NumeroProduto[0]+" - "+DescricaoProduto[0]+" R$"+PreçoProduto[0]);
                 }
-                else if(i==1){
+                if(QuantidadeProdutos[1]!=null){
+                    totalCompra[1] = QuantidadeProdutos[1]*360.0;
                     System.out.println(QuantidadeProdutos[1]+" | "+NumeroProduto[1]+" - "+DescricaoProduto[1]+" R$"+PreçoProduto[1]);
                 }
-                else if(i==2){
+                if((QuantidadeProdutos[2]!=null)){
+                    totalCompra[2] = QuantidadeProdutos[2]*867.50;
                     System.out.println(QuantidadeProdutos[2]+" | "+NumeroProduto[2]+" - "+DescricaoProduto[2]+" R$"+PreçoProduto[2]);
                 }
-                else if(i==3){
+                if(QuantidadeProdutos[3]!=null){
+                    totalCompra[3] = QuantidadeProdutos[3]*1230.75;
                     System.out.println(QuantidadeProdutos[3]+" | "+NumeroProduto[3]+" - "+DescricaoProduto[3]+" R$"+PreçoProduto[3]);
                 }
-                else if(i==4){
+                if(QuantidadeProdutos[4]!=null){
+                    totalCompra[4] = QuantidadeProdutos[4]*2154.0;
                     System.out.println(QuantidadeProdutos[4]+" | "+NumeroProduto[4]+" - "+DescricaoProduto[4]+" R$"+PreçoProduto[4]);
                 }
-
+                for(int j=0;j<4;j++){
+                    total += totalCompra[j];
+                }
+                 System.out.println("Seu total foi de R$"+total);
             }
-        }
-    }
+
+
 
 }
