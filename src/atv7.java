@@ -9,13 +9,6 @@ public class atv7 {
         numDeLinhas();
 
     }
-    public static int numDeLinhas(){
 
-        int linhas =0;
-
-        System.out.println("Informe o número de Linhas: ");
-        linhas = sc.nextInt();
-
-    }
 
 }

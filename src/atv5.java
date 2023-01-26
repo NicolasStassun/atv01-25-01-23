@@ -41,7 +41,7 @@ public class atv5 {
         try {
             Scanner entrada = new Scanner(System.in);
 
-            System.out.println("*****************************************************");
+            System.out.println("--------------------------====================--------------------------");
 
             System.out.print("Informe o texto a ser criptografado: ");
             String texto = entrada.nextLine();
@@ -51,14 +51,13 @@ public class atv5 {
             String textoCriptografado = encriptar(chave, texto);
             String textoDescriptografado = decriptar(chave, textoCriptografado);
 
-            System.out.println("\n\nTEXTO CRIPTOGRAFADO: " + textoCriptografado);
-            System.out.println("TEXTO DESCRIPTOGRAFADO: " + textoDescriptografado);
+            System.out.println("\n\nCRIPTOGRAFADO: " + textoCriptografado);
+            System.out.println("DESCRIPTOGRAFADO: " + textoDescriptografado);
 
-            System.out.println("*****************************************************");
+            System.out.println("--------------------------====================--------------------------");
 
         } catch (RuntimeException e) {
-            System.out.println("A chave de deslocamento foi informada incorretamente.");
-            System.out.println("Execute o programa novamente e entre com uma chave valida.");
+            System.out.println("A chave de deslocamento incorretamente.");
         }
 
     }
