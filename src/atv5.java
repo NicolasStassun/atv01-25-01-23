@@ -39,14 +39,14 @@ public class atv5 {
     public static void main(String[] args) {
 
         try {
-            Scanner entrada = new Scanner(System.in);
+            Scanner sc = new Scanner(System.in);
 
             System.out.println("--------------------------====================--------------------------");
 
             System.out.print("Informe o texto a ser criptografado: ");
-            String texto = entrada.nextLine();
+            String texto = sc.nextLine();
             System.out.print("Informe a chave de deslocamento: ");
-            int chave = entrada.nextInt();
+            int chave = sc.nextInt();
 
             String textoCriptografado = encriptar(chave, texto);
             String textoDescriptografado = decriptar(chave, textoCriptografado);
